@@ -1,0 +1,3 @@
+D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/raytracer.dir
+D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/ALL_BUILD.dir
+D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/ZERO_CHECK.dir

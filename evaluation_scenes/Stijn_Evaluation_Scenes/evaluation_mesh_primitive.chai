@@ -1,0 +1,35 @@
+def material(c)
+{
+  Materials.uniform( [ "ambient": Colors.white() * 0.1,
+                       "diffuse": c * 0.8 ] )
+}
+
+global m = mesh("D:/raytracer-jerome-rafael-stijn/evaluation_scenes/Stijn_Evaluation_Scenes/pyramid.mesh")
+
+def scene_at(now)
+{
+  var x = Animations.animate(-5, 5, seconds(5))
+
+  var camera = Cameras.perspective( [ "eye": pos(x[now], -2, 10),
+                                      "look_at": pos(0,0,0) ] )
+
+
+  var root = decorate( material(Colors.white()), m )
+
+var lights = [ Lights.omnidirectional( pos(2,2,5), Colors.white() ) ]
+
+  create_scene(camera, root, lights)
+}
+
+var raytracer = Raytracers.latest()
+
+var renderer    = Renderers.standard( [ "width": 500,
+                                        "height": 500,
+                                        "sampler": Samplers.single(),
+                                        "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(5),
+            Pipeline.renderer(renderer),
+            Pipeline.studio() ] )
+

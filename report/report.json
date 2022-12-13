@@ -1,0 +1,72 @@
+{
+  "url": "https://github.com/ucll-3dcg-2122/raytracer-jerome-rafael-stijn.git",
+  "team-members": [
+    {
+      "id": "r0692258",
+      "firstName": "Rafael",
+      "lastName": "Hoek",
+      "status": "Defense in January",
+      "extensions": [
+        "Scripting",
+        "Ray Tracer v1",
+        "Ray Tracer v4",
+        "Ray Tracer v5",
+        "Disk",
+        "Planes",
+        "Grouper",
+        "Cartoon Renderer",
+        "Edge Renderer",
+        "Masking Renderer",
+        "Random Sampler",
+        "Studio Pipeline Segment",
+        "Quaternions",
+        "Circular Animation",
+        "Lissajous Animation",
+        "Mesh Optimizer"
+      ]
+    },
+    {
+      "id": "r0797235",
+      "firstName": "Stijn",
+      "lastName": "Hendrix",
+      "status": "Defense in January",
+      "extensions": [
+        "Scripting",
+        "Mesh Optimizer",
+        "Stratified Sampler",
+        "Mesh Primitive",
+        "Bounding Box Accelerator",
+        "Bouncy and Elastic Easing Animation",
+        "Triangle",
+        "Easing Library",
+        "Ray Tracer v2",
+        "Ray Tracer v3",
+        "Ray Tracer v6",
+        "Ray Tracer v7",
+        "Ray Tracer v8",
+		    "Box"
+      ]
+    },
+        {
+      "id": "r0747707",
+      "firstName": "Jérôme",
+      "lastName": "de Meester",
+      "status": "Defense in June/August",
+      "extensions": [
+        "Naive Parallel Task Scheduler",
+	  "Spot Lights",
+	  "Fisheye Camera",
+        "Directional Light",
+        "N-Rooks Sampler",
+        "Stratified - Jittered Sampler",
+        "Stratified - Half Jittered Sampler",
+        "Multijittered Sampler",
+        "Cone",
+	  "Polynomial Easing Functions",
+	  "Cylinder",
+        "Transformations"
+      ],
+	"comment" : "I also made Primitive Transformations and Matrix Transformations, one of them is not in the list: http://3dcg.leone.ucll.be/extensions/math/transformations/explanations.html, http://3dcg.leone.ucll.be/extensions/primitives/modifiers/transformations/explanations.html"
+    }
+  ]
+}

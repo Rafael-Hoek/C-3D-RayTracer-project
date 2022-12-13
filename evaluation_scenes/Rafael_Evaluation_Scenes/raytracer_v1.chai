@@ -1,0 +1,28 @@
+var camera = Cameras.perspective( [ "eye": pos(0,0,10),
+                                    "look_at": pos(0,0,0) ] )
+
+
+var red = Materials.uniform( [ "ambient": Colors.red() ] )
+                               
+var green = Materials.uniform( [ "ambient": Colors.green() ] )
+                               
+var orange = Materials.uniform( [ "ambient": Colors.red() + Colors.green() * 0.5 ] )
+
+var root = union([decorate(red, translate(vec(0,-3,0),sphere())),decorate(green, translate(vec(0,3,0),sphere())),decorate(orange, sphere())])
+
+var lights = [ Lights.omnidirectional( pos(2,2,5), Colors.white() ) ]
+
+var scene = create_scene(camera, root, lights)
+
+var raytracer = Raytracers.v1()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene,
+          [ Pipeline.renderer(renderer),
+            Pipeline.wif(),
+            Pipeline.base64(),
+            Pipeline.stdout() ] )

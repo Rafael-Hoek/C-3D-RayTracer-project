@@ -1,0 +1,48 @@
+def material(c)
+{
+  Materials.uniform( [ "ambient": c * 0.1,
+                       "diffuse": c * 0.8,
+                       "specular": Colors.white() * 0.1,
+                       "specular_exponent": 10,
+                       "transparency": 0.7,
+                       "refractive_index": 2.5,
+                       "light_filtering": Colors.white(),
+			           "specular_exponent": 50,
+			           "reflectivity": 0.5] )
+}
+
+def scene_at(now)
+{
+
+var x = Animations.animate(0, -1, seconds(4))
+var y = Animations.animate(0, 4, seconds(4))
+
+var camera = Cameras.perspective( [ "eye": pos(0,0,5 - y[now]),
+                                    "look_at": pos(x[now],0,0) ] )
+
+
+var root = union([
+    translate(vec(1.5,0,0), decorate(material(Colors.green()), sphere())),
+    translate(vec(-1.5,0,0), decorate(material(Colors.red()), sphere()))])
+
+var lights = [ Lights.omnidirectional( pos(0,3,0), Colors.white() ) ]
+
+var scene = create_scene(camera, root, lights)
+
+
+
+}
+
+var raytracer = Raytracers.v6()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(30),
+            Pipeline.renderer(renderer),
+            Pipeline.wif(),
+            Pipeline.base64(),
+            Pipeline.stdout() ] )

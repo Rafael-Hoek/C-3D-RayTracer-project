@@ -1,0 +1,31 @@
+var camera = Cameras.perspective( [ "eye": pos(3,3,5),
+                                    "look_at": pos(0,0,0) ] )
+
+
+var red = Materials.uniform( [ "ambient": Colors.red() * 0.1,
+                               "diffuse": Colors.red() * 0.5 ] )
+                               
+var green = Materials.uniform( [ "ambient": Colors.green() * 0.1,
+                               "diffuse": Colors.green() * 0.5 ] )
+                               
+var blue = Materials.uniform( [ "ambient": Colors.blue() * 0.1,
+                               "diffuse": Colors.blue() * 0.5 ] )
+
+var root = union([decorate(red, xy_disk(1)),decorate(green, yz_disk(1)),decorate(blue,xz_disk(1))])
+
+var lights = [ Lights.omnidirectional( pos(2,2,5), Colors.white() ) ]
+
+var scene = create_scene(camera, root, lights)
+
+var raytracer = Raytracers.latest()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene,
+          [ Pipeline.renderer(renderer),
+            Pipeline.wif(),
+            Pipeline.base64(),
+            Pipeline.stdout() ] )

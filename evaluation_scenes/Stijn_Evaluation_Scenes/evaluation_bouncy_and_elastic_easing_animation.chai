@@ -1,0 +1,57 @@
+def material(color)
+{
+  Materials.uniform( [ "ambient": color] )
+}
+
+def scene_at(now)
+{
+  var camera = Cameras.perspective( [ "eye": pos(0, 0, 13),
+                                      "look_at": pos(0,0,0) ] )
+
+  var center_sphere_position = Animations.ease( Animations.animate( pos(0,0,2), pos(0,0,-2), seconds(3) ), Easing.elastic(15, 1) )[now]
+  var center_sphere = translate(center_sphere_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+  
+  var sphere_left_top_position = Animations.ease( Animations.animate( pos(0,6.5,0), pos(0,0,0), seconds(3) ), Easing.bounce(8, 2) )[now]
+  var sphere_left_top = translate(sphere_left_top_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+
+  var sphere_left_bot_position = Animations.ease( Animations.animate( pos(0,0,0), pos(0,3.5,0), seconds(3) ), Easing.bounce(8, 2) )[now]
+  var sphere_left_bot = translate(sphere_left_bot_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+  
+  var sphere1_top_position = Animations.ease( Animations.animate( pos(0.3 + 5,0,0), pos(1.7,0,0), seconds(3) ), Easing.bounce(8, 10) )[now]
+  var sphere1_top = translate(sphere1_top_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+
+  var sphere2_top_position = Animations.ease( Animations.animate( pos(1.5 - 5,0,0), pos(0,0,0), seconds(3) ), Easing.bounce(8, 10) )[now]
+  var sphere2_top = translate(sphere2_top_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+
+  var sphere_r_position = Animations.ease( Animations.animate( pos(0,0,0), pos(1,1,0), seconds(3) ), Easing.elastic(15, 1) )[now]
+  var sphere_r = translate(sphere_r_position - pos(0, 0, 0), decorate(material(Colors.white()), sphere()))
+
+
+  var root = union([
+  	translate(vec(0, 0, -2), center_sphere),
+  	
+    translate(vec(-6, 0, -2), sphere_left_top),
+    translate(vec(-6, -5, -2), sphere_left_bot),
+    
+    translate(vec(0, 6, -2), sphere1_top),
+    translate(vec(0, 6, -2), sphere2_top),
+    
+    translate(vec(0, -5, -2), sphere_r)
+  ])
+
+  var lights = [ Lights.omnidirectional( pos(0,5,5), Colors.white() ) ]
+
+
+  create_scene(camera, root, lights)
+}
+
+var raytracer   = Raytracers.v1
+var renderer    = Renderers.standard( [ "width": 500,
+                                        "height": 500,
+                                        "sampler": Samplers.single(),
+                                        "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(30),
+            Pipeline.renderer(renderer),
+            Pipeline.studio() ] )

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\duration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\time-stamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\displaceable-camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\perspective-camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\command-line-parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\bitmap-function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\bitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\color-mapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\wif-format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\light-ray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\omnidirectional-point-light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\point-light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\composition-material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\material-properties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\uniform-material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\angle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\easing\linear-easing-function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\easing\stretch-easing-function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\random-function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\quadratic_equation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\quantize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rasterizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\ray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rectangle2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rectangle3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation-matrices.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\performance\performance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\animation-processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\base64-processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\renderer-processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\text-writer-consumer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\wif-consumer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\wif-processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\csg-union-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\decorator-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\mesh\mesh-text-reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\plane-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\sphere-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\transformer-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\union-primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\renderers\renderer-base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\renderers\standard-renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\samplers\sampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\samplers\single-sampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\animation-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\cameras-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\imaging-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\lights-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\materials-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\math-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\pipeline-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\primitives-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\raytracing-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\rendering-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\samplers-module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\scripting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tasks\lambda-task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tasks\serial-task-scheduler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tests\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\beep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\misc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\easylogging++.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1D7641E9-4971-3A52-AE4A-A1D6A120E847}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

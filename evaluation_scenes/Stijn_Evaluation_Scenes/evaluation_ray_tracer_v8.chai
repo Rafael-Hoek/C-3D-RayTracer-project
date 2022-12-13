@@ -1,0 +1,71 @@
+def material(color) {
+  Materials.uniform( [ "ambient": color * 0.1,
+                                             "diffuse": color * 0.8,
+                                             "specular": Colors.white() * 0.8,
+                                             "specular_exponent": 100] )
+}
+
+def material_x(t, r, a) {
+  Materials.uniform( [  "translucency": a,
+                        "transparency": t,
+                        "refractive_index": r] )
+}
+
+def scene_at(now)
+{
+
+
+
+var camera = Cameras.perspective( [ "eye": pos(0,0,15),
+                                    "look_at": pos(0,0,0) ] )
+                           
+var primitives = []
+
+var a = 10
+var ha = a / 4
+
+for (var x = -a; x < a; ++x) {
+    for (var y = -a; y < a; ++y) {
+        var i = x + y
+        if (i % 3 == 0) {
+            primitives.push_back(translate(vec(x * 2 + ha, y * 2  + ha, -1), decorate(material(Colors.blue), sphere())))
+        }
+        else if (i % 3 == 1 || i % 3 == -1) {
+            primitives.push_back( translate(vec(x * 2  + ha, y * 2  + ha, -1), decorate(material(Colors.green), sphere())))
+        }
+        else if (i % 3 == 2 || i % 3 == -2) {
+            primitives.push_back( translate(vec(x * 2  + ha , y * 2  + ha, -1), decorate(material(Colors.red), sphere())))
+        }
+    }
+}
+
+
+var t = Animations.animate(0, 1, seconds(1))
+var g = Animations.animate(1, 0, seconds(2))
+var r = Animations.animate(1,2.2, seconds(5))
+
+primitives.push_back( translate(vec(0, 0, 13), decorate(material_x(t[now], r[now], g[now]), sphere())))
+                           
+var root = union(primitives)
+
+var lights = [ Lights.omnidirectional( pos(0,0,6), Colors.white() ) ]
+
+var scene = create_scene(camera, root, lights)
+
+
+
+}
+
+var raytracer = Raytracers.v8()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(5),
+            Pipeline.renderer(renderer),
+            Pipeline.wif(),
+            Pipeline.base64(),
+            Pipeline.stdout() ] )

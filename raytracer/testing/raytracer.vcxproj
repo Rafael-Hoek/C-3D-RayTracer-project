@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{606DDDA5-794F-3E6A-B345-6E97730005CE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>raytracer</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">raytracer.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">raytracer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">raytracer.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">raytracer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">raytracer.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">raytracer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">raytracer.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">raytracer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -pedantic -Werror -ldl "/MDd /Zi /Ob0 /Od /RTC1"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/raytracer-jerome-rafael-stijn/raytracer/testing/Debug/raytracer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/raytracer-jerome-rafael-stijn/raytracer/testing/Debug/raytracer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -pedantic -Werror -ldl "/MDd /Zi /Ob0 /Od /RTC1"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/raytracer-jerome-rafael-stijn/raytracer/testing/Release/raytracer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/raytracer-jerome-rafael-stijn/raytracer/testing/Release/raytracer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -pedantic -Werror -ldl "/MDd /Zi /Ob0 /Od /RTC1"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/raytracer-jerome-rafael-stijn/raytracer/testing/MinSizeRel/raytracer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/raytracer-jerome-rafael-stijn/raytracer/testing/MinSizeRel/raytracer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra -pedantic -Werror -ldl "/MDd /Zi /Ob0 /Od /RTC1"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TEST_BUILD;EXCLUDE_SCRIPTING;ELPP_CUSTOM_OUT=std::cerr;ELPP_THREAD_SAFE;ELPP_FEATURE_PERFORMANCE_TRACKING;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/raytracer-jerome-rafael-stijn/raytracer/testing/RelWithDebInfo/raytracer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/raytracer-jerome-rafael-stijn/raytracer/testing/RelWithDebInfo/raytracer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/raytracer-jerome-rafael-stijn/raytracer/raytracer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/raytracer-jerome-rafael-stijn/raytracer/raytracer -BD:/raytracer-jerome-rafael-stijn/raytracer/testing --check-stamp-file D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindThreads.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/raytracer-jerome-rafael-stijn/raytracer/raytracer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/raytracer-jerome-rafael-stijn/raytracer/raytracer -BD:/raytracer-jerome-rafael-stijn/raytracer/testing --check-stamp-file D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindThreads.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/raytracer-jerome-rafael-stijn/raytracer/raytracer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/raytracer-jerome-rafael-stijn/raytracer/raytracer -BD:/raytracer-jerome-rafael-stijn/raytracer/testing --check-stamp-file D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindThreads.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/raytracer-jerome-rafael-stijn/raytracer/raytracer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/raytracer-jerome-rafael-stijn/raytracer/raytracer -BD:/raytracer-jerome-rafael-stijn/raytracer/testing --check-stamp-file D:/raytracer-jerome-rafael-stijn/raytracer/testing/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\FindThreads.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\Stijn\AppData\Local\Programs\Python\Python37\Lib\site-packages\cmake\data\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\3.15.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\raytracer-jerome-rafael-stijn\raytracer\testing\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\animation.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\duration.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\animation\time-stamp.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\app.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\camera.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\displaceable-camera.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\cameras\perspective-camera.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\command-line-parser.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\bitmap-function.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\bitmap.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\color-mapper.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\color.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\imaging\wif-format.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\light-ray.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\omnidirectional-point-light.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\lights\point-light.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\logging.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\composition-material.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\material-properties.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\material.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\materials\uniform-material.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\angle.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\box.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\easing\linear-easing-function.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\easing\stretch-easing-function.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\functions\random-function.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\matrix.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\plane.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\quadratic_equation.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\quantize.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rasterizer.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\ray.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rectangle2d.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\rectangle3d.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation-matrices.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation2d.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\math\transformation3d.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\performance\performance.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\animation-processor.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\base64-processor.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\renderer-processor.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\text-writer-consumer.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\wif-consumer.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\pipeline\wif-processor.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\csg-union-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\decorator-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\mesh\mesh-text-reader.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\plane-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\sphere-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\transformer-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\primitives\union-primitive.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v0.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v1.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\raytracers\ray-tracer-v2.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\renderers\renderer-base.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\renderers\standard-renderer.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\samplers\sampler.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\samplers\single-sampler.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\animation-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\cameras-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\imaging-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\lights-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\materials-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\math-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\pipeline-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\primitives-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\raytracing-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\rendering-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\samplers-module.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\scripting\scripting.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tasks\lambda-task.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tasks\serial-task-scheduler.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\tests\main.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\base64.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\beep.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\util\misc.cpp" />
+    <ClCompile Include="D:\raytracer-jerome-rafael-stijn\raytracer\raytracer\easylogging++.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\raytracer-jerome-rafael-stijn\raytracer\testing\ZERO_CHECK.vcxproj">
+      <Project>{90D0A45C-6E0E-32D2-9B9F-A82D2CF3F683}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

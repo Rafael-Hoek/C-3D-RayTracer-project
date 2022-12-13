@@ -1,0 +1,47 @@
+def material(c, se)
+{
+  Materials.uniform( [ "ambient": c * 0.1,
+                                             "diffuse": c * 0.8,
+                                             "specular": c * 0.8,
+                                             "specular_exponent": se ] )
+}
+
+def scene_at(now)
+{
+var camera = Cameras.perspective( [ "eye": pos(0,0,10),
+                                    "look_at": pos(0,0,0) ] )
+
+
+var primitives = []
+primitives.push_back(translate(vec(0,0,-4), decorate(material(Colors.white(), 50), xy_plane())))
+
+primitives.push_back(translate(vec(3,3,0), decorate(material(Colors.red(), 2), sphere())))
+primitives.push_back(translate(vec(-3,3,0), decorate(material(Colors.red(), 2), sphere())))
+
+primitives.push_back(translate(vec(3,0,0), decorate(material(Colors.blue(), 5), sphere())))
+primitives.push_back(translate(vec(-3,0,0), decorate(material(Colors.blue(), 5), sphere())))
+
+primitives.push_back(translate(vec(3,-3,0), decorate(material(Colors.green(), 50), sphere())))
+primitives.push_back(translate(vec(-3,-3,0), decorate(material(Colors.green(), 50), sphere())))
+
+var root = union(primitives)
+  
+var y = Animations.animate(3, -3, seconds(5))  
+  
+var lights = [ Lights.omnidirectional( pos(0,y[now], 4), Colors.white() ) ]
+
+var scene = create_scene(camera, root, lights)
+
+}
+
+var raytracer = Raytracers.v3()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(30),
+            Pipeline.renderer(renderer),
+            Pipeline.studio() ] )

@@ -1,0 +1,29 @@
+def scene_at(now)
+{
+    var camera = Cameras.perspective( [ "eye": pos(0,0,10),
+                                        "look_at": pos(0,0,0) ] )
+
+    var z = Animations.animate(5, 1, seconds(5))
+    var s1 = translate(vec(z[now], 0, 0), sphere())
+    var s2 = translate(vec(-z[now], 0, 0), sphere())
+    var s3 = translate(vec(0, z[now], 0), sphere())
+    var s4 = translate(vec(0, -z[now], 0), sphere())
+    var s5 = translate(vec(0, 0, z[now]), sphere())
+	
+	var root = union([s1,s2,s3,s4,s5])
+    var lights = [ ]
+
+    create_scene(camera, root, lights)
+}
+
+var raytracer = Raytracers.v0()
+
+var renderer = Renderers.standard( [ "width": 500,
+                                     "height": 500,
+                                     "sampler": Samplers.single(),
+                                     "ray_tracer": raytracer ] )
+
+pipeline( scene_animation(scene_at, seconds(5)),
+          [ Pipeline.animation(30),
+            Pipeline.renderer(renderer),
+            Pipeline.studio() ] )
